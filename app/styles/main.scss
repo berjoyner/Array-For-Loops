@@ -4,6 +4,16 @@ $icon-font-path: "/bower_components/bootstrap-sass-official/vendor/assets/fonts/
 @import '../../bower_components/bootstrap-sass-official/vendor/assets/stylesheets/bootstrap.scss';
 // endbower
 
+@mixin font-family($font-family) {
+  -webkit-font-family: $font-family;
+     -moz-font-family: $font-family;
+      -ms-font-family: $font-family;
+          font-family: $font-family;
+
+body { @include font-family("Buda", cursive); }
+
+}
+
 .browsehappy {
     margin: 0.2em 0;
     background: #ccc;
@@ -30,12 +40,7 @@ body {
     border-bottom: 1px solid #e5e5e5;
 
     /* Make the masthead heading the same height as the navigation */
-    h3 {
-        margin-top: 0;
-        margin-bottom: 0;
-        line-height: 40px;
-        padding-bottom: 19px;
-    }
+
 }
 
 /* Custom page footer */
@@ -53,9 +58,18 @@ body {
 .jumbotron {
     text-align: center;
     border-bottom: 1px solid #e5e5e5;
+    .lead {
+        font-size: 35px;
+    }
     .btn {
-        font-size: 21px;
+        font-size: 20px;
         padding: 14px 24px;
+    }
+    img {
+        margin-top: 0;
+        margin-bottom: -100px;
+        width:600px;
+        height:500px;
     }
 }
 
@@ -64,6 +78,8 @@ body {
     margin: 40px 0;
     p + h4 {
         margin-top: 28px;
+        text-align:center;
+        font-size: 15px;
     }
 }
 
@@ -92,6 +108,10 @@ body {
     }
 }
 
+.col-lg-6 img {
+    width:200px;
+    height:200px;
+}
 .topnav {
     background:black;
     color:white;
